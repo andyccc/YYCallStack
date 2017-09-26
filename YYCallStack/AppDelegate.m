@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YYThreadMonitor.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [YYThreadMonitor startMonitor];
+    
+    for (int i = 0; i < 100; i++) {
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            sleep(100 * (i + 1));
+        });
+    }
+    
     return YES;
 }
 

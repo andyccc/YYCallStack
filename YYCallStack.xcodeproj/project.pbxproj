@@ -16,6 +16,7 @@
 		25D9ACC127005C7B00397F80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D9ACC027005C7B00397F80 /* main.m */; };
 		25D9ACCC27005CC000397F80 /* YYCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D9ACC827005CBF00397F80 /* YYCallStack.m */; };
 		25D9ACCE27005CC000397F80 /* YYCallStackSymbol.c in Sources */ = {isa = PBXBuildFile; fileRef = 25D9ACCA27005CC000397F80 /* YYCallStackSymbol.c */; };
+		25D9ACD22700633A00397F80 /* YYThreadMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D9ACD12700633A00397F80 /* YYThreadMonitor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		25D9ACCA27005CC000397F80 /* YYCallStackSymbol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = YYCallStackSymbol.c; sourceTree = "<group>"; };
 		25D9ACCB27005CC000397F80 /* YYCallStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCallStack.h; sourceTree = "<group>"; };
 		25D9ACCF27005CC000397F80 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		25D9ACD02700633A00397F80 /* YYThreadMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYThreadMonitor.h; sourceTree = "<group>"; };
+		25D9ACD12700633A00397F80 /* YYThreadMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYThreadMonitor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +71,9 @@
 		25D9ACAD27005C7900397F80 /* YYCallStack */ = {
 			isa = PBXGroup;
 			children = (
+				25D9ACD42700668700397F80 /* CallStack */,
+				25D9ACD3270063B700397F80 /* ThreadMonitor */,
 				25D9ACCF27005CC000397F80 /* README.md */,
-				25D9ACCB27005CC000397F80 /* YYCallStack.h */,
-				25D9ACC827005CBF00397F80 /* YYCallStack.m */,
-				25D9ACCA27005CC000397F80 /* YYCallStackSymbol.c */,
-				25D9ACC727005CBF00397F80 /* YYCallStackSymbol.h */,
 				25D9ACAE27005C7900397F80 /* AppDelegate.h */,
 				25D9ACAF27005C7900397F80 /* AppDelegate.m */,
 				25D9ACB127005C7900397F80 /* SceneDelegate.h */,
@@ -86,6 +87,26 @@
 				25D9ACC027005C7B00397F80 /* main.m */,
 			);
 			path = YYCallStack;
+			sourceTree = "<group>";
+		};
+		25D9ACD3270063B700397F80 /* ThreadMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				25D9ACD02700633A00397F80 /* YYThreadMonitor.h */,
+				25D9ACD12700633A00397F80 /* YYThreadMonitor.m */,
+			);
+			path = ThreadMonitor;
+			sourceTree = "<group>";
+		};
+		25D9ACD42700668700397F80 /* CallStack */ = {
+			isa = PBXGroup;
+			children = (
+				25D9ACCB27005CC000397F80 /* YYCallStack.h */,
+				25D9ACC827005CBF00397F80 /* YYCallStack.m */,
+				25D9ACCA27005CC000397F80 /* YYCallStackSymbol.c */,
+				25D9ACC727005CBF00397F80 /* YYCallStackSymbol.h */,
+			);
+			path = CallStack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25D9ACD22700633A00397F80 /* YYThreadMonitor.m in Sources */,
 				25D9ACCE27005CC000397F80 /* YYCallStackSymbol.c in Sources */,
 				25D9ACB627005C7900397F80 /* ViewController.m in Sources */,
 				25D9ACCC27005CC000397F80 /* YYCallStack.m in Sources */,
